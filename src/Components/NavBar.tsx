@@ -1,8 +1,4 @@
-import {
-  MotionValue,
-  motion,
-  useMotionValue,
-} from "framer-motion";
+import { MotionValue, motion, useMotionValue } from "framer-motion";
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaGithub, FaTwitch, FaYoutube } from "react-icons/fa";
@@ -69,7 +65,7 @@ function NavBar() {
   };
 
   return (
-    <div className="flex justify-center pt-8">
+    <nav className="flex justify-center">
       <div className="w-6/12 py-4">
         <ul className="flex justify-center gap-12">
           {links.map((link) => {
@@ -99,7 +95,7 @@ function NavBar() {
           })}
         </ul>
       </div>
-    </div>
+    </nav>
   );
 }
 
