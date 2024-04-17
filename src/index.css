@@ -38,11 +38,6 @@
   }
   
   span,
-  a {
-    display: inline-block;
-  }
-  a,
-  span,
   li {
     transition: all 1s var(--elastic-out);
   }

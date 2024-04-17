@@ -2,16 +2,42 @@ import {
   MotionValue,
   motion,
   useMotionValue,
-  useTransform,
 } from "framer-motion";
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaGithub, FaTwitch, FaYoutube } from "react-icons/fa";
+import { IoIosContact, IoIosDocument } from "react-icons/io";
 
 function NavBar() {
-  const links = [
-    { name: "Github", url: "https://github.com/LinusTC", target: "_blank" },
-    { name: "CV", url: "/CV", target: "_blank" },
-    { name: "Contact", url: "#", target: "_self" },
+  type LinkItem = {
+    name: string;
+    url: string;
+    target: string;
+    icon: JSX.Element;
+  };
+
+  const links: LinkItem[] = [
+    {
+      name: "Github",
+      url: "https://github.com/LinusTC",
+      target: "_blank",
+      icon: <FaGithub />,
+    },
+    {
+      name: "Twitch",
+      url: "https://www.twitch.tv/lifetc",
+      target: "_blank",
+      icon: <FaTwitch />,
+    },
+    {
+      name: "Youtube",
+      url: "https://www.youtube.com/channel/UCwEr3Nj_phs5WSAQSN1RN-A",
+      target: "_self",
+      icon: <FaYoutube />,
+    },
+    { name: "Contact", url: "#", target: "_self", icon: <IoIosContact /> },
+
+    { name: "CV", url: "/CV", target: "_blank", icon: <IoIosDocument /> },
   ];
 
   const mapRange = (
@@ -40,7 +66,6 @@ function NavBar() {
     const yRange = mapRange(0, bounds.height, -1, 1)(relativeY);
     x.set(xRange * 30);
     y.set(yRange * 30);
-    console.log(xRange);
   };
 
   return (
@@ -50,8 +75,6 @@ function NavBar() {
           {links.map((link) => {
             const x = useMotionValue(0);
             const y = useMotionValue(0);
-            const textX = useTransform(x, (latest) => latest * 0.5);
-            const textY = useTransform(y, (latest) => latest * 0.5);
             return (
               <motion.li
                 onPointerMove={(event) => {
@@ -59,17 +82,17 @@ function NavBar() {
                   setTransform(item, event, x, y);
                 }}
                 key={link.url}
-                onPointerLeave={(event) => {
-                    x.set(0),
-                    y.set(0)
+                onPointerLeave={() => {
+                  x.set(0), y.set(0);
                 }}
                 style={{ x, y }}
               >
                 <Link
+                  target="_blank"
                   to={link.url}
-                  className="text-xl rounded-md py-2 px-4 transition-all duration-500 hover:bg-colorE8E8E8 ease-out"
+                  className="text-3xl rounded-md py-2 px-4 transition-all duration-500 hover:bg-colorE8E8E8 ease-out flex items-center gap-2"
                 >
-                  <motion.span>{link.name}</motion.span>
+                  {link.icon} <motion.span>{link.name}</motion.span>
                 </Link>
               </motion.li>
             );
