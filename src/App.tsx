@@ -1,10 +1,18 @@
-function App() {
+import CV from "./Views/CV";
+import MainPage from "./Views/MainPage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+function App() {
   return (
     <>
-      <div> HELLO </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="CV" element={<CV />} />
+        </Routes>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
