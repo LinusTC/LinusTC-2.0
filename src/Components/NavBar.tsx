@@ -69,7 +69,7 @@ function NavBar() {
   };
 
   return (
-    <nav className="flex justify-center bg-white">
+    <nav className="flex justify-center bg-white/30 backdrop-blur-md">
       <div className="w-6/12 py-4">
         <ul className="flex justify-center gap-12">
           {links.map((link) => {
