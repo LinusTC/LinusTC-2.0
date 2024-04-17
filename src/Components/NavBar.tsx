@@ -6,14 +6,15 @@ import {
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaGithub, FaTwitch, FaYoutube } from "react-icons/fa";
-import { IoIosContact, IoIosDocument } from "react-icons/io";
+import { IoIosContact } from "react-icons/io";
+import { TiDocumentText } from "react-icons/ti";
 
 function NavBar() {
   type LinkItem = {
     name: string;
     url: string;
     target: string;
-    icon: JSX.Element;
+    icon?: JSX.Element;
   };
 
   const links: LinkItem[] = [
@@ -37,7 +38,7 @@ function NavBar() {
     },
     { name: "Contact", url: "#", target: "_self", icon: <IoIosContact /> },
 
-    { name: "CV", url: "/CV", target: "_blank", icon: <IoIosDocument /> },
+    { name: "CV", url: "/CV", target: "_blank" },
   ];
 
   const mapRange = (
