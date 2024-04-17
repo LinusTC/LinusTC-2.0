@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
 
 function CV() {
   return (
-    <div>CV</div>
-  )
+    <>
+      <iframe
+        src="../src/Assets/LinusCV.pdf"
+        className="w-full h-screen"
+      ></iframe>
+    </>
+  );
 }
 
-export default CV
+export default CV;
