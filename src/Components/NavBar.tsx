@@ -38,8 +38,8 @@ function NavBar() {
     const relativeY = event.clientY - bounds.top;
     const xRange = mapRange(0, bounds.width, -1, 1)(relativeX);
     const yRange = mapRange(0, bounds.height, -1, 1)(relativeY);
-    x.set(xRange * 20);
-    y.set(yRange * 20);
+    x.set(xRange * 30);
+    y.set(yRange * 30);
     console.log(xRange);
   };
 
