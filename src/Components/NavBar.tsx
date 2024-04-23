@@ -7,7 +7,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaGithub, FaTwitch, FaYoutube } from "react-icons/fa";
 import { IoIosContact } from "react-icons/io";
-import { TiDocumentText } from "react-icons/ti";
 
 function NavBar() {
   type LinkItem = {
@@ -65,8 +64,8 @@ function NavBar() {
     const relativeY = event.clientY - bounds.top;
     const xRange = mapRange(0, bounds.width, -1, 1)(relativeX);
     const yRange = mapRange(0, bounds.height, -1, 1)(relativeY);
-    x.set(xRange * 30);
-    y.set(yRange * 30);
+    x.set(xRange * 100);
+    y.set(yRange * 100);
   };
 
   return (
