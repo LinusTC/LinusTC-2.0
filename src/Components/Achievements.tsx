@@ -6,7 +6,7 @@ function Achievements() {
 
   return (
     <div>
-      <p className="pb-2 text-white">Some of my latest achievements:</p>
+      <p className="pb-2 text-white text-lg">Some of my latest achievements:</p>
       <div className="grid grid-cols-2 gap-8">
         {boxes.map((content, index) => (
           <motion.div
