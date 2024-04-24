@@ -2,15 +2,10 @@ import React from "react";
 
 function About() {
   return (
-    <div className="py-8 text-white flex">
+    <div className="py-8 text-white flex justify-end items-center">
       <div className="space-y-2 pr-4">
-        <p className="text-4xl">Hello, I'm Linus! Nice to meet you!</p>
-        <p className="text-lg text-justify">
-          I am a third year CS student at the University of Edinburgh. I specialize in full stack development, with additional interests in data science and AI.
-        </p>
-        <p className="text-lg text-justify">
-          As a hobby, I enjoy streaming myself playing video games and editing videos. Feel free to reach out!
-        </p>
+        <p className="text-7xl">Hello, I'm Linus!</p>
+        <p className="text-6xl">Nice to meet you!</p>
       </div>
       <img
         className="rounded-full"
