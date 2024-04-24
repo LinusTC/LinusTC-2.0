@@ -8,6 +8,9 @@ export default {
       },
       colors: {
         colorE8E8E8: "#E8E8E8",
+        color3E3E40: "#3E3E40",
+        color252526: "#252526",
+        color2D2D30:"#2D2D30",
       },
     },
   },

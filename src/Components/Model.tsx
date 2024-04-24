@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 function Model() {
   return (
-    <div>Model</div>
-  )
+    <>
+    MODEL
+    </>
+  );
 }
 
-export default Model
+export default Model;

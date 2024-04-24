@@ -5,7 +5,7 @@ import {
 } from "framer-motion";
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaGithub, FaTwitch, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaTwitch, FaYoutube, FaInstagram } from "react-icons/fa";
 import { IoIosContact } from "react-icons/io";
 
 function NavBar() {
@@ -35,6 +35,7 @@ function NavBar() {
       target: "_self",
       icon: <FaYoutube />,
     },
+    { name: "Instagram", url: "https://www.instagram.com/linus_tc/", target: "_blank", icon: <FaInstagram /> },
     { name: "Contact", url: "#", target: "_self", icon: <IoIosContact /> },
 
     { name: "CV", url: "/CV", target: "_blank" },
@@ -64,13 +65,13 @@ function NavBar() {
     const relativeY = event.clientY - bounds.top;
     const xRange = mapRange(0, bounds.width, -1, 1)(relativeX);
     const yRange = mapRange(0, bounds.height, -1, 1)(relativeY);
-    x.set(xRange * 100);
-    y.set(yRange * 100);
+    x.set(xRange * 50);
+    y.set(yRange * 50);
   };
 
   return (
-    <nav className="flex justify-center bg-white/30 backdrop-blur-md">
-      <div className="w-6/12 py-4">
+    <nav className="flex justify-center bg-color252526 sticky top-0">
+      <div className="w-6/12 py-2">
         <ul className="flex justify-center gap-12">
           {links.map((link) => {
             const x = useMotionValue(0);
@@ -90,7 +91,7 @@ function NavBar() {
                 <Link
                   target="_blank"
                   to={link.url}
-                  className="text-3xl rounded-md py-2 px-4 transition-all duration-500 hover:bg-colorE8E8E8 ease-out flex items-center gap-2"
+                  className="text-2xl text-white rounded-md py-2 px-4 transition-all duration-500 ease-out flex items-center gap-2"
                 >
                   {link.icon} <motion.span>{link.name}</motion.span>
                 </Link>
