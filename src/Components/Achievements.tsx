@@ -1,20 +1,21 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useState } from "react";
 
 function Achievements() {
-  const boxes = ["box 1", "box 2", "box 3", "box 4", "box 5"];
+  const [isActive, setIsActive] = useState("");
+  const boxes = ["box 1", "box 2", "box 3", "box 4", "box 5", "box 5", "box 5"];
 
   return (
     <div>
       <p className="pb-2 text-white text-lg">Some of my latest achievements:</p>
-      <div className="grid grid-cols-2 gap-8">
+      <div className="flex flex-wrap gap-6">
         {boxes.map((content, index) => (
           <motion.div
             key={index}
             whileHover={{
               scale: 1.05,
             }}
-            className="bg-white hover:cursor-pointer rounded-md h-36"
+            className="bg-white hover:cursor-pointer rounded-md w-414px h-36"
           >
             {content}
           </motion.div>

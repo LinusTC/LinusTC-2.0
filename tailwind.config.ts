@@ -12,6 +12,9 @@ export default {
         color252526: "#252526",
         color2D2D30:"#2D2D30",
       },
+      width: {
+        '414px': '25.9rem',
+      }
     },
   },
   plugins: [],

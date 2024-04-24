@@ -1,18 +1,22 @@
+import { useRef } from "react";
 import About from "../Components/About";
 import Achievements from "../Components/Achievements";
 import Model from "../Components/Model";
 import NavBar from "../Components/NavBar";
+import Logo from "../Components/Logo";
 
 function MainPage() {
+
   return (
     <>
       <NavBar />
-      <div className="grid grid-cols-2 px-24 gap-8">
+      <Logo/>
+      <Model/>
+      <div className="pl-24 w-6/12 z-10">
         <div className="grid grid-cols-1">
           <About />
           <Achievements />
         </div>
-        <Model />
       </div>
     </>
   );
