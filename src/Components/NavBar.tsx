@@ -97,7 +97,7 @@ function NavBar() {
                 <Link
                   target={link.target}
                   to={link.url}
-                  className="text-2xl text-white rounded-md py-2 px-4 transition-all duration-500 ease-out flex items-center gap-2 hover:underline"
+                  className="text-2xl text-white my-2 mx-4 flex items-center gap-2 hover:underline"
                 >
                   {link.icon} <motion.span>{link.name}</motion.span>
                 </Link>
