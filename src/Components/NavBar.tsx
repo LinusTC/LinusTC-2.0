@@ -70,8 +70,8 @@ function NavBar() {
   };
 
   return (
-    <nav className="flex justify-center bg-color252526 sticky top-0">
-      <div className="w-6/12 py-2">
+    <nav className="flex justify-center top-0 sticky z-20 bg-black/10 backdrop-blur-lg">
+      <div className="py-2">
         <ul className="flex justify-center gap-12">
           {links.map((link) => {
             const x = useMotionValue(0);
@@ -91,7 +91,7 @@ function NavBar() {
                 <Link
                   target="_blank"
                   to={link.url}
-                  className="text-2xl text-white rounded-md py-2 px-4 transition-all duration-500 ease-out flex items-center gap-2"
+                  className="text-2xl text-white rounded-md py-2 px-4 transition-all duration-500 ease-out flex items-center gap-2 hover:underline"
                 >
                   {link.icon} <motion.span>{link.name}</motion.span>
                 </Link>

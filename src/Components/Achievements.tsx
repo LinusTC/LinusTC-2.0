@@ -1,9 +1,7 @@
 import { motion } from "framer-motion";
-import React, { useState } from "react";
 
 function Achievements() {
-  const [isActive, setIsActive] = useState("");
-  const boxes = ["box 1", "box 2", "box 3", "box 4", "box 5", "box 5", "box 5"];
+  const boxes = ["box 1", "box 2", "box 3", "box 4", "box 5", "box 6", "box 7"];
 
   return (
     <div>
