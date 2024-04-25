@@ -1,23 +1,23 @@
-import { useRef } from "react";
 import About from "../Components/About";
 import Achievements from "../Components/Achievements";
 import NavBar from "../Components/NavBar";
 import Logo from "../Components/Logo";
+import { motion } from "framer-motion";
 
 function MainPage() {
-  const canvasRef = useRef(null);
-
   return (
     <>
       <NavBar />
-      <canvas ref={canvasRef} className="absolute top-0 left-0 z-0 -mt-48"></canvas>
-      <Logo canvasRef={canvasRef} />
-      <div className="relative pl-24 w-6/12 z-10 mt-64">
-        <div className="grid grid-cols-1">
-          <About />
-          <Achievements />
-        </div>
-      </div>
+      <Logo />
+      <motion.div
+        initial={{ x: -925 }}
+        animate={{ x: 0 }}
+        transition={{ type: "spring", damping: 12, delay: 1.5 }}
+        className="relative pl-24 w-6/12 z-10 mt-64 grid grid-cols-1"
+      >
+        <About />
+        <Achievements />
+      </motion.div>
     </>
   );
 }

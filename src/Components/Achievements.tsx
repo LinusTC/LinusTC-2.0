@@ -13,6 +13,9 @@ function Achievements() {
             whileHover={{
               scale: 1.05,
             }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ amount: 0.5 }}
             className="bg-white hover:cursor-pointer rounded-md w-414px h-36"
           >
             {content}

@@ -1,8 +1,4 @@
-import {
-  MotionValue,
-  motion,
-  useMotionValue,
-} from "framer-motion";
+import { MotionValue, motion, useMotionValue } from "framer-motion";
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaGithub, FaTwitch, FaYoutube, FaInstagram } from "react-icons/fa";
@@ -35,7 +31,12 @@ function NavBar() {
       target: "_self",
       icon: <FaYoutube />,
     },
-    { name: "Instagram", url: "https://www.instagram.com/linus_tc/", target: "_blank", icon: <FaInstagram /> },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/linus_tc/",
+      target: "_blank",
+      icon: <FaInstagram />,
+    },
     { name: "Contact", url: "#", target: "_self", icon: <IoIosContact /> },
 
     { name: "CV", url: "/CV", target: "_blank" },
@@ -70,7 +71,12 @@ function NavBar() {
   };
 
   return (
-    <nav className="flex justify-center top-0 sticky z-20 bg-black/10 backdrop-blur-lg">
+    <motion.nav
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ type: "spring", damping: 12, delay: 1.5}}
+      className="flex justify-center top-0 sticky z-20 bg-black/10 backdrop-blur-lg"
+    >
       <div className="py-2">
         <ul className="flex justify-center gap-12">
           {links.map((link) => {
@@ -89,7 +95,7 @@ function NavBar() {
                 style={{ x, y }}
               >
                 <Link
-                  target="_blank"
+                  target={link.target}
                   to={link.url}
                   className="text-2xl text-white rounded-md py-2 px-4 transition-all duration-500 ease-out flex items-center gap-2 hover:underline"
                 >
@@ -100,7 +106,7 @@ function NavBar() {
           })}
         </ul>
       </div>
-    </nav>
+    </motion.nav>
   );
 }
 
