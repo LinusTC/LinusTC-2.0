@@ -3,6 +3,7 @@ import Achievements from "../Components/Achievements";
 import NavBar from "../Components/NavBar";
 import Logo from "../Components/Logo";
 import { motion } from "framer-motion";
+import Contact from "../Components/Contact";
 
 function MainPage() {
   return (
@@ -18,6 +19,7 @@ function MainPage() {
         <About />
         <Achievements />
       </motion.div>
+      <Contact/>
     </>
   );
 }

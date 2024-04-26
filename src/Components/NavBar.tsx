@@ -77,7 +77,7 @@ function NavBar() {
       transition={{ type: "spring", damping: 12, delay: 1.5}}
       className="flex justify-center top-0 sticky z-20 bg-black/10 backdrop-blur-lg"
     >
-      <div className="py-2">
+      <div className="my-2">
         <ul className="flex justify-center gap-12">
           {links.map((link) => {
             const x = useMotionValue(0);
