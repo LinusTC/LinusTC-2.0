@@ -16,7 +16,7 @@ function Achievements() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ amount: 0.5 }}
-            className="bg-white hover:cursor-pointer rounded-md w-414px h-36"
+            className="bg-white hover:cursor-pointer rounded-md w-48% h-36"
           >
             {content}
           </motion.div>
