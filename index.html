@@ -4,18 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LinusTC</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/css-doodle/0.39.0/css-doodle.min.js"></script>
   </head>
   <body style="background-color: #2d2d30; overflow-x: hidden;">
-    <css-doodle>
-      :doodle { @grid: 1x3 / 100vw 140vh; position: absolute; z-index: 0; } @size:
-      100%; position: absolute; background: @m(100, (
-      linear-gradient(transparent, @p( #FFFFFF@repeat(2, @p([0-9a-f])), ))
-      @r(0%, 100%) @r(0%, 100%) / @r(4px) @r(24vmin) no-repeat )); will-change:
-      transform; animation: f 40s linear calc(-50s / @size() * @i()) infinite;
-      @keyframes f { from { transform: translateY(-100%) } to { transform:
-      translateY(100%) } }
-    </css-doodle>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
