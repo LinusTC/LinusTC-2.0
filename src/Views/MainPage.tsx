@@ -19,7 +19,7 @@ function MainPage() {
         <About />
         <Achievements />
       </motion.div>
-      <Contact/>
+      <Contact />
     </>
   );
 }
