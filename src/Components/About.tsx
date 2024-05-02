@@ -7,10 +7,7 @@ function About() {
         <p className="text-6xl">Hello, I'm Linus!</p>
         <p className="text-5xl">Nice to meet you!</p>
       </div>
-      <img
-        className="rounded-full"
-        src="https://placehold.co/250x250"
-      />
+      <img className=" w-96 rounded-full" src="src\Assets\Me.jpg" />
     </div>
   );
 }
