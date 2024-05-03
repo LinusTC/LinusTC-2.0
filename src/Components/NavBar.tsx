@@ -2,7 +2,6 @@ import { MotionValue, motion, useMotionValue } from "framer-motion";
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaGithub, FaTwitch, FaYoutube, FaInstagram } from "react-icons/fa";
-import { IoIosContact } from "react-icons/io";
 
 function NavBar() {
   type LinkItem = {
@@ -37,8 +36,6 @@ function NavBar() {
       target: "_blank",
       icon: <FaInstagram />,
     },
-    { name: "Contact", url: "#", target: "_self", icon: <IoIosContact /> },
-
     { name: "CV", url: "/CV", target: "_blank" },
   ];
 
