@@ -72,7 +72,7 @@ function NavBar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", damping: 12, delay: 1.5}}
-      className="flex justify-center top-0 sticky z-40 bg-black/10 backdrop-blur-lg"
+      className="flex justify-center top-0 sticky z-40 bg-black/15 backdrop-blur-lg"
     >
       <div className="my-2">
         <ul className="flex justify-center gap-12">
