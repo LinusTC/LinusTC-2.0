@@ -26,7 +26,7 @@ function Contact() {
       initial={{ x: 200 }}
       animate={{ x: 0 }}
       transition={{ type: "spring", damping: 12, delay: 1.5 }}
-      className="fixed bottom-0 right-0 m-4"
+      className="fixed bottom-0 right-0 m-4 z-30"
       ref={wrapperRef}
     >
       <motion.div
@@ -37,7 +37,7 @@ function Contact() {
         <motion.h2
           layout="position"
           onClick={() => setIsOpen(!isOpen)}
-          className="text-2xl flex items-center gap-1 cursor-pointer"
+          className="text-2xl flex items-center cursor-pointer"
         >
           <IoIosContact /> Contact
         </motion.h2>

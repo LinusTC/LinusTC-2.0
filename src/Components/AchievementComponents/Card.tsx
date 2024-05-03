@@ -14,6 +14,7 @@ interface CardLinkProps extends MotionProps {
 const CardLink = styled(motion.div)<CardLinkProps>`
   height: 100%;
   width: 100%;
+  z-index: 30;
   ${(props) =>
     props.isCardOpened &&
     css`
@@ -27,7 +28,7 @@ const CardLink = styled(motion.div)<CardLinkProps>`
       bottom: 0;
       left: 0;
       margin: auto;
-      z-index: 10;
+      z-index: 50;
       display: flex;
       justify-content: flex-start;
       flex-direction: column;
@@ -86,7 +87,7 @@ function Card({ title, src }: CardProps) {
             }}
           ></div>
           <motion.div
-            className="fixed inset-0 h-screen w-screen bg-[rgba(10,10,10,0.7)]"
+            className="fixed inset-0 h-screen w-screen bg-[rgba(10,10,10,0.7)] z-40"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             onClick={() => setIsCardOpened(false)}
