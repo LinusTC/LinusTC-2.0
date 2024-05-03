@@ -17,7 +17,7 @@ const CardLink = styled(motion.div)<CardLinkProps>`
   ${(props) =>
     props.isCardOpened &&
     css`
-      width: min(45rem, 95%);
+      width: min(50rem, 95%);
       height: calc(100% - 10rem);
       overflow-y: auto;
       overflow-x: hidden;
