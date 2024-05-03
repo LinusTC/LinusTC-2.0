@@ -15,6 +15,14 @@ export default {
       width: {
         "48%": "48%",
       },
+      animation: {
+        gradient: "gradient 8s linear infinite",
+      },
+      keyframes: {
+        gradient: {
+          to: { "background-position": "200% center" },
+        },
+      },
     },
   },
   plugins: [],
