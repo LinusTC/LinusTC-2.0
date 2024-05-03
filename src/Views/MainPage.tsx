@@ -8,7 +8,7 @@ import Contact from "../Components/Contact";
 function MainPage() {
   return (
     <>
-      <NavBar />
+      <NavBar /> 
       <Logo />
       <motion.div
         initial={{ x: -952 }}
@@ -25,3 +25,10 @@ function MainPage() {
 }
 
 export default MainPage;
+
+// Z indexes
+// NavBar 40
+// Logo 0
+// About 30
+// Achievements closed 30, open 50
+// Contact 30

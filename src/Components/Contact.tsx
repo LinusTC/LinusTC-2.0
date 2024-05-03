@@ -31,7 +31,7 @@ function Contact() {
     >
       <motion.div
         layout
-        className="bg-white p-4 shadow-lg"
+        className="bg-white p-3 shadow-lg"
         style={{ borderRadius: "1rem" }}
       >
         <motion.h2
