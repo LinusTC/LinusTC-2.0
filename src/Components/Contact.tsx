@@ -9,7 +9,7 @@ function Contact() {
 
   function useOutsideAlerter(ref: React.RefObject<HTMLDivElement>) {
     useEffect(() => {
-      function handleClickOutside(event: { target: any; }) {
+      function handleClickOutside(event: { target: any }) {
         if (ref.current && !ref.current.contains(event.target)) {
           setIsOpen(false);
         }
@@ -42,7 +42,7 @@ function Contact() {
           <IoIosContact /> Contact
         </motion.h2>
         {isOpen && (
-          <motion.div>
+          <motion.div layout="position">
             <p>Email: tongchun03@gmail.com</p>
             <p>Instagram: linus_tc</p>
           </motion.div>

@@ -1,5 +1,3 @@
-import React from "react";
-
 function About() {
   return (
     <div className="text-white flex justify-center items-center z-30">
