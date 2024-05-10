@@ -1,3 +1,5 @@
+import ProfilePic from '../Assets/Me.jpg';
+
 function About() {
   return (
     <div className="text-white flex justify-center items-center z-30">
@@ -12,7 +14,7 @@ function About() {
         </div>
         <p className="text-5xl">Nice to meet you!</p>
       </div>
-      <img className=" w-96 rounded-full" src="src\Assets\Me.jpg" />
+      <img className=" w-96 rounded-full" src={ProfilePic} />
     </div>
   );
 }
