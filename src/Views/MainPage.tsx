@@ -10,6 +10,7 @@ function MainPage() {
     <>
       <NavBar /> 
       <Logo />
+      <div className="absolute top-15 text-white"> Preview of whats to comes</div>
       <motion.div
         initial={{ x: -952 }}
         animate={{ x: 0 }}
