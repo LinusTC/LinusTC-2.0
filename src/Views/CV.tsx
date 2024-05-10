@@ -1,8 +1,10 @@
+import LinusCV from '../Assets/LinusCV.pdf';
+
 function CV() {
   return (
     <>
       <iframe
-        src="../src/Assets/LinusCV.pdf"
+        src={LinusCV}
         className="w-full h-screen"
       ></iframe>
     </>
