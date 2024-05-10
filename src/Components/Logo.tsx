@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/examples/jsm/Addons.js";
-
+import LogoSrc from '../Assets/Logo.glb?url';
 
 function Logo() {
   const canvasRef = useRef(null);
@@ -79,7 +79,7 @@ function Logo() {
 
     // GLTFLoader
     const loader = new GLTFLoader();
-    loader.load("src/assets/logo.glb", function (gltf) {
+    loader.load(LogoSrc, function (gltf) {
       const logo = gltf.scene;
       scene.add(logo);
     });
