@@ -1,11 +1,12 @@
 import Card from "./AchievementComponents/Card";
 import { motion } from "framer-motion";
+import TickBox from "../Assets/TickBox.png";
 
 export default function MainSection() {
   const cardData = [
     {
-      title: "Item1",
-      src: "https://placehold.co/1920x1080",
+      title: "TickBox",
+      src: TickBox,
     },
     {
       title: "Item2",

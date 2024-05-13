@@ -18,7 +18,7 @@ const CardLink = styled(motion.div)<CardLinkProps>`
   ${(props) =>
     props.isCardOpened &&
     css`
-      width: min(50rem, 95%);
+      width: min(70rem, 95%);
       height: calc(100% - 10rem);
       overflow-y: auto;
       overflow-x: hidden;
@@ -60,7 +60,7 @@ function Card({ title, src }: CardProps) {
         viewport={{ amount: 0.5 }}
         style={{ cursor: isCardOpened ? 'auto' : 'pointer' }}
       >
-        <motion.img layout src={src} className="h-auto w-full" />
+        <motion.img layout src={src} className="h-auto w-full rounded-lg" />
         <motion.h2
           layout="position"
           className={`text-white ${(isCardOpened)? "text-5xl" : "text-lg"}`}
