@@ -1,24 +1,38 @@
 import Card from "./AchievementComponents/Card";
 import { motion } from "framer-motion";
 import TickBox from "../Assets/TickBox.png";
+import PlaneGlobe from "../Assets/Planeglobe.png";
+
 
 export default function MainSection() {
   const cardData = [
     {
       title: "TickBox",
-      src: TickBox,
+      photoSource: TickBox,
+      videoSource: "https://www.youtube.com/embed/I8zTqKyKqe4?autoplay=1",
+      description: "Hello",
     },
     {
-      title: "Item2",
-      src: "https://placehold.co/1920x1080",
+      title: "PlaneGlobe",
+      photoSource: PlaneGlobe,
+      videoSource: "https://www.youtube.com/embed/m0mJknaS3p0?autoplay=1",
+      description: "Hello",
     },
     {
       title: "Item3",
-      src: "https://placehold.co/1920x1080",
+      photoSource: "https://placehold.co/1920x1080",
+      videoSource: "https://www.youtube.com/embed/I8zTqKyKqe4?rel=0?autoplay=1",
+      description: "Hello",
     },
   ].map((cardObj, index) => {
     return (
-      <Card key={`card-${index}`} title={cardObj.title} src={cardObj.src} />
+      <Card
+        key={`card-${index}`}
+        title={cardObj.title}
+        photoSource={cardObj.photoSource}
+        videoSource={cardObj.videoSource}
+        description={cardObj.description}
+      />
     );
   });
 

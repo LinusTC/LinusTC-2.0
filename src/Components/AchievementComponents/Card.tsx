@@ -4,7 +4,9 @@ import { Fragment, useRef, useState } from "react";
 
 interface CardProps {
   title: string;
-  src: string;
+  photoSource: string;
+  videoSource: string;
+  description: string;
 }
 
 interface CardLinkProps extends MotionProps {
@@ -35,7 +37,7 @@ const CardLink = styled(motion.div)<CardLinkProps>`
     `}
 `;
 
-function Card({ title, src }: CardProps) {
+function Card({ title, photoSource, videoSource, description }: CardProps) {
   const [isCardOpened, setIsCardOpened] = useState(false);
   const [cardDimensions, setCardDimensions] = useState({ width: 0, height: 0 });
   const card = useRef<HTMLDivElement>(null);
@@ -58,12 +60,20 @@ function Card({ title, src }: CardProps) {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ amount: 0.5 }}
-        style={{ cursor: isCardOpened ? 'auto' : 'pointer' }}
+        style={{ cursor: isCardOpened ? "auto" : "pointer" }}
       >
-        <motion.img layout src={src} className="h-auto w-full rounded-lg" />
+        {isCardOpened ? (
+          <motion.iframe
+            src={videoSource}
+            className="aspect-video"
+          />
+        ) : (
+          <motion.img src={photoSource} className="h-auto w-full rounded-lg" />
+        )}
+
         <motion.h2
           layout="position"
-          className={`text-white ${(isCardOpened)? "text-5xl" : "text-lg"}`}
+          className={`text-white ${isCardOpened ? "text-5xl" : "text-lg"}`}
         >
           {title}
         </motion.h2>
@@ -74,7 +84,7 @@ function Card({ title, src }: CardProps) {
             animate={{ opacity: 1 }}
             className="font-thin text-white text-2xl"
           >
-            Yessir
+            {description}
           </motion.p>
         )}
       </CardLink>
