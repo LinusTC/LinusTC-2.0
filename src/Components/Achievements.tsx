@@ -15,7 +15,7 @@ export default function MainSection() {
     {
       title: "PlaneGlobe",
       photoSource: PlaneGlobe,
-      videoSource: "https://www.youtube.com/embed/m0mJknaS3p0?autoplay=1",
+      videoSource: "https://www.youtube.com/embed/l10cf8hbagM?autoplay=1",
       description: "Hello",
     },
     {
