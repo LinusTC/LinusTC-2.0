@@ -7,6 +7,7 @@ interface CardProps {
   photoSource: string;
   videoSource: string;
   description: string;
+  isVideo: boolean;
 }
 
 interface CardLinkProps extends MotionProps {
@@ -37,7 +38,13 @@ const CardLink = styled(motion.div)<CardLinkProps>`
     `}
 `;
 
-function Card({ title, photoSource, videoSource, description }: CardProps) {
+function Card({
+  title,
+  photoSource,
+  videoSource,
+  description,
+  isVideo,
+}: CardProps) {
   const [isCardOpened, setIsCardOpened] = useState(false);
   const [cardDimensions, setCardDimensions] = useState({ width: 0, height: 0 });
   const card = useRef<HTMLDivElement>(null);
@@ -63,10 +70,14 @@ function Card({ title, photoSource, videoSource, description }: CardProps) {
         style={{ cursor: isCardOpened ? "auto" : "pointer" }}
       >
         {isCardOpened ? (
-          <motion.iframe
-            src={videoSource}
-            className="aspect-video"
-          />
+          isVideo ? (
+            <motion.iframe src={videoSource} className="aspect-video" />
+          ) : (
+            <motion.img
+              src={photoSource}
+              className="h-auto w-full rounded-lg"
+            />
+          )
         ) : (
           <motion.img src={photoSource} className="h-auto w-full rounded-lg" />
         )}

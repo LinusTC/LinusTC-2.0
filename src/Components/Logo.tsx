@@ -57,7 +57,7 @@ function Logo() {
     // OrbitControls
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
-    controls.enableZoom = false;
+    controls.enableZoom = true;
     controls.enablePan = false;
 
     // Save the default position

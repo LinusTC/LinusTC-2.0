@@ -10,18 +10,21 @@ export default function MainSection() {
       title: "TickBox",
       photoSource: TickBox,
       videoSource: "https://www.youtube.com/embed/I8zTqKyKqe4?autoplay=1",
+      isVideo: true,
       description: "Hello",
     },
     {
       title: "PlaneGlobe",
       photoSource: PlaneGlobe,
       videoSource: "https://www.youtube.com/embed/l10cf8hbagM?autoplay=1",
+      isVideo: true,
       description: "Hello",
     },
     {
       title: "Item3",
       photoSource: "https://placehold.co/1920x1080",
       videoSource: "https://www.youtube.com/embed/I8zTqKyKqe4?rel=0?autoplay=1",
+      isVideo: false,
       description: "Hello",
     },
   ].map((cardObj, index) => {
@@ -31,6 +34,7 @@ export default function MainSection() {
         title={cardObj.title}
         photoSource={cardObj.photoSource}
         videoSource={cardObj.videoSource}
+        isVideo={cardObj.isVideo}
         description={cardObj.description}
       />
     );
