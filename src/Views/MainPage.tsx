@@ -14,7 +14,7 @@ function MainPage() {
         initial={{ x: -952 }}
         animate={{ x: 0 }}
         transition={{ type: "spring", damping: 12, delay: 1.5 }}
-        className="relative pl-24 w-6/12 mt-64 grid grid-cols-1"
+        className="relative w-[50%] pl-[6%] mt-[15%] grid grid-cols-1"
       >
         <About />
         <Achievements />

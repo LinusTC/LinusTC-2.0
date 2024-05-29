@@ -109,7 +109,7 @@ function Logo() {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute top-0 left-0 z-0 -mt-48"
+      className="absolute top-0 left-0 z-0 -mt-[10%]"
     ></canvas>
   );
 }

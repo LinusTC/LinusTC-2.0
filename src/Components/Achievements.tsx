@@ -19,6 +19,13 @@ export default function MainSection() {
       ),
     },
     {
+      title: "PizzaDronz",
+      photoSource: "https://placehold.co/1920x1080",
+      videoSource: "https://www.youtube.com/embed/I8zTqKyKqe4?rel=0?autoplay=1",
+      isVideo: false,
+      description: <div>Hello</div>,
+    },
+    {
       title: "PlaneGlobe",
       photoSource: PlaneGlobe,
       videoSource:
@@ -45,13 +52,6 @@ export default function MainSection() {
         </>
       ),
     },
-    {
-      title: "Item3",
-      photoSource: "https://placehold.co/1920x1080",
-      videoSource: "https://www.youtube.com/embed/I8zTqKyKqe4?rel=0?autoplay=1",
-      isVideo: false,
-      description: <div>Hello</div>,
-    },
   ].map((cardObj, index) => {
     return (
       <Card
@@ -69,7 +69,7 @@ export default function MainSection() {
     <>
       <p className="pb-2 text-white text-lg">Some of my latest achievements:</p>
       <motion.div
-        className="grid grid-cols-2 gap-4"
+        className="grid grid-cols-2 gap-[2%]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{
