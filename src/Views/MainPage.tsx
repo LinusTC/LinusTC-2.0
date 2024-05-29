@@ -4,24 +4,8 @@ import NavBar from "../Components/NavBar";
 import Logo from "../Components/Logo";
 import { motion } from "framer-motion";
 import Contact from "../Components/Contact";
-import { useState, useEffect } from "react";
-import LoadingSpinner from "../Components/LoadingSpinner";
 
 function MainPage() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const loadAssets = async () => {
-      await new Promise((resolve) => setTimeout(resolve, 100));
-      setIsLoading(false);
-    };
-
-    loadAssets();
-  }, []);
-
-  if (isLoading) {
-    return <LoadingSpinner />;
-  }
   return (
     <>
       <NavBar />
