@@ -3,29 +3,54 @@ import { motion } from "framer-motion";
 import TickBox from "../Assets/TickBox.png";
 import PlaneGlobe from "../Assets/Planeglobe.png";
 
-
 export default function MainSection() {
   const cardData = [
     {
       title: "TickBox",
       photoSource: TickBox,
-      videoSource: "https://www.youtube.com/embed/I8zTqKyKqe4?autoplay=1",
+      videoSource:
+        "https://www.youtube.com/embed/I8zTqKyKqe4?autoplay=1&loop=1&playlist=I8zTqKyKqe4",
       isVideo: true,
-      description: "Hello",
+      description: (
+        <div>
+          This is TickBox, a product that combines a phone lock box and a web
+          application aimed to help users minimize phone distractions.
+        </div>
+      ),
     },
     {
       title: "PlaneGlobe",
       photoSource: PlaneGlobe,
-      videoSource: "https://www.youtube.com/embed/l10cf8hbagM?autoplay=1",
+      videoSource:
+        "https://www.youtube.com/embed/l10cf8hbagM?autoplay=1&loop=1&playlist=l10cf8hbagM",
       isVideo: true,
-      description: "Hello",
+      description: (
+        <>
+          <p>
+            Using Three.js, I developed a 3D representation of flights around
+            the world. I Learned to use mathematical functions to convert
+            Longitude Latitude airport coordinates to XYZ on globe and used
+            Euler angles to represent rotations of planes around the globe.
+          </p>
+          <p>
+            Try it Yourself:
+            <a
+              target="_blank"
+              href="https://planeglobe.linustc.com/"
+              className="underline"
+            >
+              Here
+            </a>
+          </p>
+        </>
+      ),
     },
     {
       title: "Item3",
       photoSource: "https://placehold.co/1920x1080",
       videoSource: "https://www.youtube.com/embed/I8zTqKyKqe4?rel=0?autoplay=1",
       isVideo: false,
-      description: "Hello",
+      description: <div>Hello</div>,
     },
   ].map((cardObj, index) => {
     return (

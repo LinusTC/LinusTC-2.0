@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/examples/jsm/Addons.js";
-import LogoSrc from '../Assets/Logo.glb?url';
+import LogoSrc from "../Assets/Logo.glb?url";
 
 function Logo() {
   const canvasRef = useRef(null);
@@ -84,20 +84,22 @@ function Logo() {
       scene.add(logo);
     });
 
-    // Animation Loop
+    const clock = new THREE.Clock();
+
     const animate = () => {
       requestAnimationFrame(animate);
-      controls.update();
+      const deltaTime = clock.getDelta();
+      controls.update(deltaTime);
       renderer.render(scene, camera);
 
       if (shouldAutoRotateBack) {
-        camera.position.lerp(defaultCamPos, 0.02);
+        camera.position.lerp(defaultCamPos, deltaTime * 2);
       }
       if (playStart) {
         if (movedOnce) {
           setPlayStart(false);
         } else {
-          camera.position.lerp(defaultCamPos, 0.01);
+          camera.position.lerp(defaultCamPos, deltaTime * 3);
         }
       }
     };
@@ -105,7 +107,10 @@ function Logo() {
   }, [canvasRef]);
 
   return (
-    <canvas ref={canvasRef} className="absolute top-0 left-0 z-0 -mt-48"></canvas>
+    <canvas
+      ref={canvasRef}
+      className="absolute top-0 left-0 z-0 -mt-48"
+    ></canvas>
   );
 }
 

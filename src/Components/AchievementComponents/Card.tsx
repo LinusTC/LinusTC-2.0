@@ -6,7 +6,7 @@ interface CardProps {
   title: string;
   photoSource: string;
   videoSource: string;
-  description: string;
+  description: React.ReactNode;
   isVideo: boolean;
 }
 
@@ -21,7 +21,7 @@ const CardLink = styled(motion.div)<CardLinkProps>`
   ${(props) =>
     props.isCardOpened &&
     css`
-      width: min(70rem, 95%);
+      width: min(65rem, 95%);
       height: calc(100% - 10rem);
       overflow-y: auto;
       overflow-x: hidden;
@@ -108,7 +108,7 @@ function Card({
             }}
           ></div>
           <motion.div
-            className="fixed inset-0 h-screen w-screen bg-[rgba(10,10,10,0.7)] z-40"
+            className="fixed inset-0 h-screen w-screen bg-[rgba(10,10,10,0.85)] z-40"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             onClick={() => setIsCardOpened(false)}

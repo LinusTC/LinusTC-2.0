@@ -27,7 +27,7 @@ function NavBar() {
     {
       name: "Youtube",
       url: "https://www.youtube.com/channel/UCwEr3Nj_phs5WSAQSN1RN-A",
-      target: "_self",
+      target: "_blank",
       icon: <FaYoutube />,
     },
     {
