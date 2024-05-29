@@ -12,10 +12,16 @@ export default function MainSection() {
         "https://www.youtube.com/embed/I8zTqKyKqe4?autoplay=1&loop=1&playlist=I8zTqKyKqe4",
       isVideo: true,
       description: (
-        <div>
-          This is TickBox, a product that combines a phone lock box and a web
-          application aimed to help users minimize phone distractions.
-        </div>
+        <>
+          <p>
+            This is TickBox, a demo product my colleagues and I built that
+            combines a phone lock box and a web application aimed to help users
+            minimize phone distractions.
+          </p>
+          <p>
+            During the project, I was mainly in charge of designing and implementing the TickBox web application. Following the Factory Design Pattern, we were able create a seamless and robust user interface.
+          </p>
+        </>
       ),
     },
     {
