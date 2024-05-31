@@ -13,13 +13,22 @@ export default function MainSection() {
       isVideo: true,
       description: (
         <>
-          <p>
+          <p className="pb-2">
             This is TickBox, a demo product my colleagues and I built that
             combines a phone lock box and a web application aimed to help users
             minimize phone distractions.
           </p>
-          <p>
-            During the project, I was mainly in charge of designing and implementing the TickBox web application. Following the Factory Design Pattern, we were able create a seamless and robust user interface.
+          <p className="pb-2">
+            During the project, I was mainly in charge of designing and
+            implementing the TickBox web application. Following agile
+            development methodologies such as the Factory Design Pattern, we
+            were able create demo-ready web application within a short timeframe.
+          </p>
+          <p className="pb-2">
+            I was also tasked with creating a backend server and database to
+            store user data for TickBox. As shown in the video, we were able to
+            create a database storing user login details, friends data, to-do
+            lists etc.
           </p>
         </>
       ),
@@ -39,7 +48,7 @@ export default function MainSection() {
       isVideo: true,
       description: (
         <>
-          <p>
+          <p className="pb-2">
             Using Three.js, I developed a 3D representation of flights around
             the world. I Learned to use mathematical functions to convert
             Longitude Latitude airport coordinates to XYZ on globe and used
