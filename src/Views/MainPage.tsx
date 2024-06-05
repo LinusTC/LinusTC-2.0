@@ -5,7 +5,7 @@ import Logo from "../Components/Logo";
 import { motion } from "framer-motion";
 import Contact from "../Components/Contact";
 import { useEffect, useState } from "react";
-import { ClipLoader } from "react-spinners";
+import { MoonLoader } from "react-spinners";
 
 function MainPage() {
   const [isLoading, setIsLoading] = useState(false);
@@ -21,11 +21,11 @@ function MainPage() {
     <>
       {isLoading ? (
         <div className="flex justify-center items-center h-screen">
-          <ClipLoader
-            color="white"
-            size={150}
+          <MoonLoader color="white"
+            size={80}
             aria-label="Loading Spinner"
             data-testid="loader"
+            speedMultiplier={0.7}
           />
         </div>
       ) : (
